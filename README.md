@@ -1,5 +1,4 @@
 # Portfolio Responsive Complete
-## [Watch it on youtube](https://youtu.be/AKNvTxWOdKw)
 ### Portfolio Responsive Complete
 
 - Responsive Personal Portfolio Website HTML CSS & JavaScript.
@@ -8,7 +7,6 @@
 - Developed first with the Mobile First methodology, then for desktop.
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
 
-💙 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/@Bedimcode)
+![preview](https://github.com/sv969/github-portfolio/assets/166189909/14a8fe49-be51-4873-af27-40328b7aacc6)
 
-![preview img](/preview.png)
 
