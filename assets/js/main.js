@@ -51,9 +51,9 @@ function sendMail() {
     "?cc=sv969@nau.edu" +
     "&subject=" +
     encodeURIComponent(
-      document.getElementById("Name").value +
-        ": " +
-        document.getElementById("Email").value +
+      //   document.getElementById("Name").value +
+      //     ": " +
+      document.getElementById("Email").value +
         "----> " +
         document.getElementById("Subject").value
     ) +
