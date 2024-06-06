@@ -114,8 +114,8 @@
           <div>
             <h2 class="about__subtitle">I'am Sampath Sai Varukolu</h2>
             <p class="about__text">
-              I have 7.6 years of experience as a software engineer, With a
-              strong foundation in
+              I have <strong>7.6</strong> years of experience as a software
+              engineer, With a strong foundation in
               <strong
                 >React.js, Node.js, Express.js, Angular.js, TypeScript,
                 JavaScript, HTML, Redux with toolkit and Saga, .NET Web API,
@@ -279,16 +279,33 @@
 
         <div class="contact__container bd-grid">
           <form action="" class="contact__form">
-            <input type="text" placeholder="Name" class="contact__input" />
-            <input type="mail" placeholder="Email" class="contact__input" />
+            <input
+              type="text"
+              id="Name"
+              name="Name"
+              placeholder="Name"
+              class="contact__input"
+            />
+            <input
+              type="mail"
+              id="Email"
+              name="Email"
+              placeholder="Email"
+              class="contact__input"
+            />
             <textarea
-              name=""
-              id=""
+              name="myText"
+              id="myText"
               cols="0"
               rows="10"
               class="contact__input"
             ></textarea>
-            <input type="button" value="Send" class="contact__button button" />
+            <input
+              type="button"
+              value="Send"
+              onclick="sendMail(); return false"
+              class="contact__button button"
+            />
           </form>
         </div>
       </section>
