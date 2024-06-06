@@ -54,7 +54,7 @@ function sendMail() {
       document.getElementById("Name").value +
         ": " +
         document.getElementById("Email").value +
-        "----> " +
+        " : " +
         document.getElementById("Subject").value
     ) +
     "&body=" +
