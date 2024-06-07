@@ -14,8 +14,8 @@
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
-  --normal-font-size: .938rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
   /*===== Margenes =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
@@ -30,12 +30,14 @@
     --big-font-size: 2.3rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
-    --smaller-font-size: .875rem;
+    --smaller-font-size: 0.875rem;
   }
 }
 
 /*===== BASE =====*/
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -50,7 +52,9 @@ body {
   color: var(--second-color);
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   margin: 0;
 }
 
@@ -367,12 +371,15 @@ img {
 }
 
 /* ===== MEDIA QUERIES=====*/
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
   .home {
     row-gap: 2rem;
   }
   .home__img {
     width: 200px;
+  }
+  .button {
+    padding: 0.75rem 0.5rem;
   }
 }
 @media screen and (min-width: 576px) {
