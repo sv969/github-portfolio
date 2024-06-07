@@ -309,6 +309,9 @@ img {
 .skills__img {
   border-radius: 0.5rem;
 }
+.skills__separate__color{
+  color: yellowgreen
+}
 
 /* ===== WORK =====*/
 .work__container {
