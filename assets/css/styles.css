@@ -321,6 +321,7 @@ img {
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
   border-radius: 0.5rem;
   overflow: hidden;
+  border: 5px solid skyblue;
 }
 .work__img img {
   transition: 1s;
