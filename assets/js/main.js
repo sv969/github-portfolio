@@ -62,6 +62,29 @@ function sendMail() {
   window.location.href = link;
 }
 
+/*===== GOOGLE MAPS =====*/
+var mapProp;
+function myMap() {
+  var latLng = new google.maps.LatLng(35.198284, -111.651299);
+  mapProp = {
+    center: latLng,
+    zoom: 5,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+  };
+  /*===== CREATE THE MAP HERE =====*/
+  var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+  /*===== CREATE MARKER =====*/
+  var marker = new google.maps.Marker({
+    position: latLng,
+    title: "Flagstaff",
+    map: map,
+    draggable: true,
+  });
+}
+/*===== LOADING GOOGLE MAP HERE =====*/
+google.maps.event.addDomListener(window, "load", myMap);
+
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
   origin: "top",
