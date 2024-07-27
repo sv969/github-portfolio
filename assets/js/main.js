@@ -53,6 +53,7 @@ function sendMail() {
   if (username.trim() === "") {
     alert("Name is required.");
     isValid = false;
+    document.getElementById("Name").focus();
     return;
   }
 
@@ -61,11 +62,13 @@ function sendMail() {
   if (email.trim() === "") {
     alert("Email is required.");
     isValid = false;
+    document.getElementById("Email").focus();
     return;
   }
   if (!validateEmail(email)) {
     alert("Please enter a valid email address.");
     isValid = false;
+    document.getElementById("Email").focus();
     return;
   }
 
@@ -74,6 +77,7 @@ function sendMail() {
   if (subject.trim() === "") {
     alert("Subject is required.");
     isValid = false;
+    document.getElementById("Subject").focus();
     return;
   }
 
@@ -82,6 +86,7 @@ function sendMail() {
   if (myText.trim() === "") {
     alert("Body is required.");
     isValid = false;
+    document.getElementById("myText").focus();
     return;
   }
 
