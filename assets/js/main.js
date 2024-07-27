@@ -46,20 +46,66 @@ window.addEventListener("scroll", scrollActive);
 
 /*===== Contact Information Send =====*/
 function sendMail() {
-  var link =
-    "mailto:svarukolu9@gmail.com" +
-    "?cc=sv969@nau.edu" +
-    "&subject=" +
-    encodeURIComponent(
-      document.getElementById("Name").value +
-        ": " +
-        document.getElementById("Email").value +
-        " : " +
-        document.getElementById("Subject").value
-    ) +
-    "&body=" +
-    encodeURIComponent(document.getElementById("myText").value);
-  window.location.href = link;
+  let isValid = true;
+
+  // Validate Username
+  let username = document.getElementById("Name").value;
+  if (username.trim() === "") {
+    alert("Name is required.");
+    isValid = false;
+    return;
+  }
+
+  // Validate Email
+  let email = document.getElementById("Email").value;
+  if (email.trim() === "") {
+    alert("Email is required.");
+    isValid = false;
+    return;
+  }
+  if (!validateEmail(email)) {
+    alert("Please enter a valid email address.");
+    isValid = false;
+    return;
+  }
+
+  // Validate Subject
+  let subject = document.getElementById("Subject").value;
+  if (subject.trim() === "") {
+    alert("Subject is required.");
+    isValid = false;
+    return;
+  }
+
+  // Validate Body
+  let myText = document.getElementById("myText").value;
+  if (myText.trim() === "") {
+    alert("Body is required.");
+    isValid = false;
+    return;
+  }
+
+  if (username && email && myText && subject && isValid) {
+    var link =
+      "mailto:svarukolu9@gmail.com" +
+      "?cc=sv969@nau.edu" +
+      "&subject=" +
+      encodeURIComponent(
+        document.getElementById("Name").value +
+          ": " +
+          document.getElementById("Email").value +
+          " : " +
+          document.getElementById("Subject").value
+      ) +
+      "&body=" +
+      encodeURIComponent(document.getElementById("myText").value);
+    window.location.href = link;
+  }
+}
+
+function validateEmail(email) {
+  let re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  return re.test(String(email).toLowerCase());
 }
 
 /*===== GOOGLE MAPS =====*/
