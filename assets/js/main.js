@@ -48,46 +48,47 @@ window.addEventListener("scroll", scrollActive);
 function sendMail() {
   let isValid = true;
 
+  document.getElementById("nameError").innerText = "";
+  document.getElementById("emailError").innerText = "";
+  document.getElementById("subjectError").innerText = "";
+  document.getElementById("bodyError").innerText = "";
+
   // Validate Username
   let username = document.getElementById("Name").value;
   if (username.trim() === "") {
-    alert("Name is required.");
+    showError('nameError', 'Name is required.');
     isValid = false;
     document.getElementById("Name").focus();
-    return;
   }
 
   // Validate Email
   let email = document.getElementById("Email").value;
   if (email.trim() === "") {
-    alert("Email is required.");
+    showError('emailError', 'Email is required.');
     isValid = false;
     document.getElementById("Email").focus();
     return;
   }
   if (!validateEmail(email)) {
-    alert("Please enter a valid email address.");
+    showError('emailError', 'Please enter a valid email address.');
     isValid = false;
     document.getElementById("Email").focus();
-    return;
   }
 
   // Validate Subject
   let subject = document.getElementById("Subject").value;
   if (subject.trim() === "") {
-    alert("Subject is required.");
+    showError('subjectError', 'Subject is required.');
     isValid = false;
     document.getElementById("Subject").focus();
-    return;
   }
 
   // Validate Body
   let myText = document.getElementById("myText").value;
   if (myText.trim() === "") {
-    alert("Body is required.");
+    showError('bodyError', 'Body is required.');
     isValid = false;
     document.getElementById("myText").focus();
-    return;
   }
 
   if (username && email && myText && subject && isValid) {
@@ -106,6 +107,10 @@ function sendMail() {
       encodeURIComponent(document.getElementById("myText").value);
     window.location.href = link;
   }
+}
+
+function showError(spanId, message) {
+  document.getElementById(spanId).innerText = message;
 }
 
 function validateEmail(email) {

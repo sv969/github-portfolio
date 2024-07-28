@@ -383,6 +383,10 @@ img {
 
 .error {
   color: red;
+  font-size: 12px;
+}
+input:invalid {
+  border-color: red;
 }
 
 /* ===== MEDIA QUERIES=====*/

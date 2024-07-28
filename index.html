@@ -433,6 +433,7 @@
           <div id="googleMap" class="maps"></div>
           <br />
           <form action="" class="contact__form">
+            <span id="nameError" class="error"></span>
             <input
               type="text"
               id="Name"
@@ -440,6 +441,7 @@
               placeholder="Name"
               class="contact__input"
             />
+            <span id="emailError" class="error"></span>
             <input
               type="mail"
               id="Email"
@@ -447,6 +449,7 @@
               placeholder="Email"
               class="contact__input"
             />
+            <span id="subjectError" class="error"></span>
             <input
               type="text"
               id="Subject"
@@ -454,6 +457,7 @@
               placeholder="Subject"
               class="contact__input"
             />
+            <span id="bodyError" class="error"></span>
             <textarea
               name="myText"
               id="myText"
@@ -462,6 +466,7 @@
               placeholder="Body"
               class="contact__input"
             ></textarea>
+            
             <input
               type="submit"
               value="Send"
