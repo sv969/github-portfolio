@@ -56,7 +56,7 @@ function sendMail() {
   // Validate Username
   let username = document.getElementById("Name").value;
   if (username.trim() === "") {
-    showError('nameError', 'Name is required.');
+    showError("nameError", "Name is required.");
     isValid = false;
     document.getElementById("Name").focus();
   }
@@ -64,13 +64,12 @@ function sendMail() {
   // Validate Email
   let email = document.getElementById("Email").value;
   if (email.trim() === "") {
-    showError('emailError', 'Email is required.');
+    showError("emailError", "Email is required.");
     isValid = false;
     document.getElementById("Email").focus();
-    return;
   }
-  if (!validateEmail(email)) {
-    showError('emailError', 'Please enter a valid email address.');
+  if (!validateEmail(email) && email.trim() !== "") {
+    showError("emailError", "Please enter a valid email address.");
     isValid = false;
     document.getElementById("Email").focus();
   }
@@ -78,7 +77,7 @@ function sendMail() {
   // Validate Subject
   let subject = document.getElementById("Subject").value;
   if (subject.trim() === "") {
-    showError('subjectError', 'Subject is required.');
+    showError("subjectError", "Subject is required.");
     isValid = false;
     document.getElementById("Subject").focus();
   }
@@ -86,7 +85,7 @@ function sendMail() {
   // Validate Body
   let myText = document.getElementById("myText").value;
   if (myText.trim() === "") {
-    showError('bodyError', 'Body is required.');
+    showError("bodyError", "Body is required.");
     isValid = false;
     document.getElementById("myText").focus();
   }
