@@ -510,3 +510,9 @@ input:invalid {
     width: 450px;
   }
 }
+
+.work__ref {
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
