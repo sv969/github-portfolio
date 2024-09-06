@@ -1,3 +1,19 @@
+/*===== Page Load =====*/
+document.addEventListener("DOMContentLoaded", function () {
+  var loaded = parseInt(localStorage.getItem("loaded"), 10),
+      loaded_numb = loaded ? loaded + 1 : 1;
+
+  localStorage.setItem("loaded", loaded_numb);
+
+  var navLogo = document.querySelector(".load_Tracker");
+  
+  if (navLogo) {
+    var message = document.createElement("p");
+    message.textContent = "LoadTracker " + loaded_numb + " times!";
+    navLogo.appendChild(message);
+  }
+});
+
 /*===== MENU SHOW =====*/
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
