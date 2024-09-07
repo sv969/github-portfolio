@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
   if (navLogo) {
     var message = document.createElement("p");
     message.textContent = "LoadTracker " + loaded_numb + " times!";
+    message.style.backgroundColor = "cornflowerblue";
+    message.style.borderRadius = "15px";
+    message.style.borderColor = "skyblue";
+    message.style.borderStyle = "solid";
+    message.style.color= "papayawhip";
     navLogo.appendChild(message);
   }
 });
