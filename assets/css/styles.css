@@ -207,7 +207,8 @@ img {
   margin-bottom: var(--mb-5);
 }
 .home__title-color {
-  color: var(--first-color);
+  color: white;
+  background-color: var(--first-color);
 }
 .home__social {
   display: flex;
