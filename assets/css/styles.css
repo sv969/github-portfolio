@@ -100,12 +100,12 @@ img {
   padding-bottom: 2rem;
 }
 
-.color_time{
+.color_time {
   color: var(--second-color);
   background-color: cadetblue;
 }
 
-.color_nau{
+.color_nau {
   color: var(--second-color);
   font-size: small;
   font-family: system-ui;
@@ -382,7 +382,13 @@ img {
   margin-bottom: var(--mb-4);
 }
 .footer__social {
+  display: flex;
+  justify-content: center;
   margin-bottom: var(--mb-4);
+}
+.footer__img {
+  width: 70px;
+  height: 70px;
 }
 .footer__icon {
   font-size: 1.5rem;
