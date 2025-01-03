@@ -362,6 +362,10 @@ img {
   margin-left: auto;
 }
 
+.mobile_Color{
+  color: inherit;
+}
+
 /* ===== GOOGLE MAPS =====*/
 .maps {
   width: 100%;
