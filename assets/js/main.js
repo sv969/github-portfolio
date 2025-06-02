@@ -141,7 +141,7 @@ function validateEmail(email) {
 /*===== GOOGLE MAPS =====*/
 var mapProp;
 function myMap() {
-  var latLng = new google.maps.LatLng(35.198284, -111.651299);
+  var latLng = new google.maps.LatLng(40.07304, -74.724325);
   mapProp = {
     center: latLng,
     zoom: 6,
